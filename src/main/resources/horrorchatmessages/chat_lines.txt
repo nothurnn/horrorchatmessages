@@ -1,0 +1,90 @@
+# Horror Chat Messages - line list
+#
+# This is a STARTER SET of original lines. Review and replace this wording with your own
+# before using this mod for real - it exists to demonstrate the format, not as final copy.
+#
+# Messages appear in normal chat history (sent via Player#sendSystemMessage). Its voice is
+# deliberately SHORT, DIRECT ADDRESS - it should read like something is talking TO the player,
+# not narrating a scene. (The separate "Horror Action Bar" mod has its own line pool with the
+# opposite, longer/narrative voice - the two are independent mods, not channels of this one.)
+#
+# Format:
+#   - Lines are grouped into categories, each introduced by a bracketed header on its own line,
+#     e.g. [underground]. Every line after a header (until the next header) belongs to that
+#     category.
+#   - Blank lines and lines starting with '#' are ignored.
+#   - The optional placeholder {player} is replaced with a player's name (see the usePlayerName
+#     config option). Direct address is the point of this channel, so lean on {player} more
+#     freely here than you would elsewhere - but it's still fine to leave some lines without it.
+#
+# Recognized category keys (add more lines under any of them freely):
+#   [general]       - always-eligible fallback, used when no situational category matches.
+#   [underground]   - player has no sky access and it's dark around them (cave, mine, enclosed
+#                     unlit space).
+#   [night]         - it's nighttime in the player's world.
+#   [long_session]  - player has been connected for a while this session.
+#   [still]         - player has barely moved for a while.
+#   [alone]         - singleplayer, or the only player currently online.
+#   [low_health]    - player is currently low on health, or took damage recently.
+#   [whisper]       - not situational: used only for the "FakeName whispers to you: ..." line
+#                     that fires at most once per hauntedcore presence window (requires the
+#                     hauntedcore mod to be present - see that mod's own description).
+#
+# Unrecognized headers are ignored entirely (so a typo'd category silently loses its lines -
+# double check the key spelling matches one of the ones above).
+
+[general]
+Hello, {player}.
+I see you.
+Still there?
+You look tense.
+Don't stop now.
+
+[underground]
+It's dark down here, {player}.
+You shouldn't be this deep.
+No one hears you down here.
+The stone is listening.
+Turn back, {player}.
+
+[night]
+Can't sleep, {player}?
+It's darker for you tonight.
+Night suits me better.
+You feel it too, don't you?
+Stay close to the light.
+
+[long_session]
+You've been at this a while, {player}.
+Tired yet?
+I've been here the whole time.
+You should log off soon.
+Still awake, {player}?
+Time got away from you again.
+
+[still]
+Why did you stop, {player}?
+Go on. Keep moving.
+You're just standing there.
+I'm right behind you.
+Move.
+
+[alone]
+Just us, {player}.
+No one's coming.
+You're not alone tonight.
+I'm the only one here with you.
+Nobody logged in to help you.
+
+[low_health]
+That hurt, didn't it, {player}?
+Careful. You're almost mine.
+One more hit, {player}.
+You're bleeding, aren't you?
+Don't die yet.
+
+[whisper]
+Did you miss me, {player}?
+I'm still around, you know.
+Don't mind me.
+I never really left.

@@ -11,3 +11,10 @@ plugins {
 }
 
 rootProject.name = 'horrorchatmessages'
+
+// Composite build: resolves the com.horrortricks.hauntedcore:hauntedcore dependency
+// declared in build.gradle against hauntedcore's own sibling repo/build output, instead
+// of requiring it to be separately published first. hauntedcore stays its own repo/project
+// (per Package 3's decision to keep one git repo per mod), this just wires the two builds
+// together for compilation.
+includeBuild('../hauntedcore')

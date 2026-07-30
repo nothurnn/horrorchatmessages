@@ -113,6 +113,13 @@ configurations {
 }
 
 dependencies {
+    // hauntedcore is an optional runtime dependency (see mods.toml: type="optional", side="CLIENT") -
+    // HorrorChatMessagesPresenceBridge calls its classes directly, but HorrorChatMessagesEvents guards
+    // every call behind ModList.get().isLoaded("hauntedcore"), so the bridge class is never linked/loaded
+    // unless hauntedcore is actually present. compileOnly matches that: needed to compile against, not
+    // bundled into this mod's own jar. Resolved via the composite build in settings.gradle.
+    compileOnly "com.horrortricks.hauntedcore:hauntedcore:1.0.0"
+
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
